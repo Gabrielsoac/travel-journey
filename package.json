@@ -1,0 +1,24 @@
+{
+  "name": "travel-journey",
+  "version": "1.0.0",
+  "description": "travel journey is a project to get information for travel places using gemini AI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabrielsoac/travel-journey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabrielsoac/travel-journey/issues"
+  },
+  "homepage": "https://github.com/Gabrielsoac/travel-journey#readme",
+  "dependencies": {
+    "@google/genai": "^1.12.0"
+  }
+}
