@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
   "homepage": "https://github.com/Gabrielsoac/travel-journey#readme",
   "dependencies": {
     "@google/genai": "^1.12.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "redis": "^5.8.0"
   }
 }

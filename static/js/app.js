@@ -17,10 +17,22 @@ document.addEventListener('DOMContentLoaded', vaiParaFinalDoChat);
 
 async function enviarMensagem() {
     if(input.value == '' || input.value == null) return;
-
     const mensagem = input.value;
     input.value = '';
 
+    const response = await fetch(
+        `http://localhost:3000/chat/tst12`,
+        {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ message: mensagem }),
+        }
+    );
+
+    const data = await response.json();
+    const AIReply = data.reply; 
     const novaBolha = criaBolhaUsuario();
     novaBolha.innerHTML = mensagem;
     chat.appendChild(novaBolha);
@@ -28,7 +40,7 @@ async function enviarMensagem() {
     let novaBolhaBot = criaBolhaBot();
     chat.appendChild(novaBolhaBot);
     vaiParaFinalDoChat();
-    novaBolhaBot.innerHTML = mensagem;
+    novaBolhaBot.innerHTML = AIReply;
     vaiParaFinalDoChat();
 }
 
